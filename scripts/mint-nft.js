@@ -7,7 +7,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(API_URL);
 
 const contract = require("../artifacts/contracts/PelitaNft.sol/PelitaNft.json");
-const contractAddress = "0xc1af6ed1b5271d0862f92665f87aff742cd0a2ce";
+const contractAddress = "0x0e1b4B971ecE9F3B17b9FF6FcD0c7Da2198d65f7";
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
 async function mintNFT(tokenURI) {
@@ -29,4 +29,4 @@ async function mintNFT(tokenURI) {
   console.log(`Transaction receipt: ${JSON.stringify(transactionReceipt)}`);
 }
 
-mintNFT("https://gateway.pinata.cloud/ipfs/QmQWZ6AKzyRiS19vDZMVkVF6rAqHCQ7fAoDYwZCPpfjaRT");
+mintNFT("https://ipfs.io/ipfs/QmTYphqfpL5PajVytpdNLCaKxb1nUb6KF8T9fjZBMS6E9L?filename=nft-metadata.json");
